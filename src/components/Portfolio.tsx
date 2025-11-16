@@ -57,20 +57,20 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="featured-projects" className="relative py-32 px-6 bg-[#0a0a0a]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#1a1a1a_1px,transparent_1px)] bg-[length:50px_50px] opacity-20" />
+    <section ref={sectionRef} id="featured-projects" className="relative py-32 px-6 bg-gray-50">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#e2e8f0_1px,transparent_1px)] bg-[length:50px_50px] opacity-30" />
 
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-4 mb-4">
-            <div className="w-12 h-px bg-[#00a4b8]" />
-            <span className="text-[#00a4b8] tracking-[0.3em] text-sm uppercase font-light">Case Studies</span>
-            <div className="w-12 h-px bg-[#00a4b8]" />
+            <div className="w-12 h-px bg-slate-400" />
+            <span className="text-slate-600 tracking-[0.3em] text-sm uppercase font-light">Case Studies</span>
+            <div className="w-12 h-px bg-slate-400" />
           </div>
-          <h2 className="text-5xl md:text-7xl font-black tracking-tight mb-4">
-            FEATURED <span className="text-[#c72c7e]">PROJECTS</span>
+          <h2 className="text-5xl md:text-7xl font-semibold tracking-tight mb-4 text-gray-900">
+            FEATURED <span className="text-slate-600">PROJECTS</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Transforming architectural visions into iconic structures
           </p>
         </div>
@@ -79,7 +79,7 @@ const Portfolio = () => {
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className={`group relative overflow-hidden bg-black border border-gray-800 transition-all duration-700 hover:border-[#00a4b8] ${
+              className={`group relative overflow-hidden bg-white border border-gray-200 transition-all duration-700 hover:border-slate-400 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'
               }`}
               style={{ transitionDelay: `${idx * 150}ms` }}
@@ -92,7 +92,7 @@ const Portfolio = () => {
                 />
               </div>
 
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#c72c7e] to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-slate-400 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700" />
             </div>
           ))}
         </div>
